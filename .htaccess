@@ -1,0 +1,27 @@
+# SEO: Force HTTPS and consolidate duplicate URLs
+# Requires mod_rewrite. Enable with: a2enmod rewrite (Linux) or allow override in Apache config.
+
+# 1. Force HTTPS (301) for all host variants (http, www/non-www)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# 2. Consolidate duplicate URLs: redirect /index.html to /
+<IfModule mod_rewrite.c>
+    RewriteRule ^index\.html$ / [R=301,L]
+</IfModule>
+
+# Optional: Redirect .html to clean URLs (uncomment if your host supports it and you want canonicals without .html)
+# Then add corresponding RewriteRules so e.g. /services serves services.html
+# <IfModule mod_rewrite.c>
+#     RewriteRule ^services\.html$ /services [R=301,L]
+#     RewriteRule ^projects\.html$ /projects [R=301,L]
+#     RewriteRule ^contact\.html$ /contact [R=301,L]
+#     RewriteRule ^areas-we-serve\.html$ /areas-we-serve [R=301,L]
+#     RewriteRule ^services$ services.html [L]
+#     RewriteRule ^projects$ projects.html [L]
+#     RewriteRule ^contact$ contact.html [L]
+#     RewriteRule ^areas-we-serve$ areas-we-serve.html [L]
+# </IfModule>

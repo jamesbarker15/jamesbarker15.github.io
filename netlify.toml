@@ -1,0 +1,23 @@
+# Netlify config for jbwebsolutions.co.uk
+# Force HTTPS: set in Site settings → Domain management → HTTPS → Force HTTPS
+
+[build]
+  publish = "."
+
+# Optional: rewrites so clean URLs serve the right file (use with _redirects .html → clean URL)
+# [[redirects]]
+#   from = "/services"
+#   to = "/services.html"
+#   status = 200
+# [[redirects]]
+#   from = "/projects"
+#   to = "/projects.html"
+#   status = 200
+# [[redirects]]
+#   from = "/contact"
+#   to = "/contact.html"
+#   status = 200
+# [[redirects]]
+#   from = "/areas-we-serve"
+#   to = "/areas-we-serve.html"
+#   status = 200

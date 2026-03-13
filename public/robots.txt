@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jbwebsolutions.co.uk/sitemap.xml

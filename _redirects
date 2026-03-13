@@ -1,0 +1,12 @@
+# Netlify redirects (place in site root)
+# Enable "Force HTTPS" in Netlify: Site settings → Domain management → HTTPS → Force HTTPS
+
+# Consolidate duplicate URLs: /index.html → /
+/index.html    /    301
+
+# Optional: .html → clean URL (uncomment to use clean URLs as canonical)
+# /services.html    /services    301
+# /projects.html     /projects    301
+# /contact.html      /contact     301
+# /areas-we-serve.html    /areas-we-serve    301
+# Then add rewrites in netlify.toml so /services serves services.html
