@@ -3,17 +3,26 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
 
+const serviceLinks = [
+  { href: "/services/microsoft-365", label: "Microsoft 365" },
+  { href: "/services/it-support", label: "IT Support" },
+  { href: "/services/vpn-networking", label: "VPN & Networking" },
+  { href: "/services/server-storage", label: "Servers & Storage" },
+  { href: "/services/email-setup", label: "Email Setup" },
+  { href: "/services/security-compliance", label: "Security & Compliance" },
+];
+
 const navLinks = [
-  { href: "/#services", label: "Services" },
   { href: "/#process", label: "Process" },
 ];
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -47,6 +56,44 @@ export default function Navbar() {
 
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-8">
+            {/* Services dropdown */}
+            <div className="relative">
+              <button
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors duration-200"
+              >
+                Services
+                <ChevronDown
+                  size={16}
+                  className={cn(
+                    "transition-transform duration-200",
+                    servicesOpen && "rotate-180"
+                  )}
+                />
+              </button>
+              <AnimatePresence>
+                {servicesOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -10 }}
+                    className="absolute top-full mt-2 w-56 bg-[#030303]/95 backdrop-blur-xl border border-white/[0.06] rounded-xl overflow-hidden"
+                  >
+                    {serviceLinks.map((link) => (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setServicesOpen(false)}
+                        className="block px-4 py-2.5 text-sm text-white/60 hover:text-white hover:bg-white/[0.05] transition-colors"
+                      >
+                        {link.label}
+                      </Link>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -84,6 +131,45 @@ export default function Navbar() {
               className="md:hidden overflow-hidden border-t border-white/[0.06]"
             >
               <div className="py-4 space-y-1">
+                {/* Services submenu */}
+                <button
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  className="w-full flex items-center justify-between px-2 py-2.5 text-sm text-white/60 hover:text-white transition-colors"
+                >
+                  Services
+                  <ChevronDown
+                    size={16}
+                    className={cn(
+                      "transition-transform duration-200",
+                      servicesOpen && "rotate-180"
+                    )}
+                  />
+                </button>
+                <AnimatePresence>
+                  {servicesOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, height: 0 }}
+                      animate={{ opacity: 1, height: "auto" }}
+                      exit={{ opacity: 0, height: 0 }}
+                      className="space-y-1 pl-2"
+                    >
+                      {serviceLinks.map((link) => (
+                        <Link
+                          key={link.href}
+                          href={link.href}
+                          onClick={() => {
+                            setMenuOpen(false);
+                            setServicesOpen(false);
+                          }}
+                          className="block px-2 py-2 text-xs text-white/50 hover:text-white/70 transition-colors"
+                        >
+                          {link.label}
+                        </Link>
+                      ))}
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}

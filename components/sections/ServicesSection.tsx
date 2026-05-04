@@ -1,63 +1,63 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Palette, Code2, TrendingUp, Cloud, GitBranch, Server } from "lucide-react";
+import { Monitor, Shield, Network, HardDrive, Mail, Headphones } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const services = [
   {
-    icon: Palette,
-    title: "Web Design",
+    icon: Monitor,
+    title: "Microsoft 365",
     description:
-      "Bespoke, pixel-perfect designs built around your brand. Every site we create is unique, responsive, and optimised to convert visitors into customers.",
+      "Full setup, migration, and ongoing management of M365 — email, Teams, SharePoint, and OneDrive.",
     iconColor: "text-indigo-400",
     glowColor: "group-hover:shadow-indigo-500/10",
     borderHover: "group-hover:border-indigo-500/30",
   },
   {
-    icon: Code2,
-    title: "Web Applications",
+    icon: Shield,
+    title: "Security & Compliance",
     description:
-      "Custom-built web apps tailored to your exact business workflows. From booking systems to client portals, we build tools that solve real problems.",
+      "MFA, Microsoft Defender, Intune device management, and security policies that actually hold.",
     iconColor: "text-violet-400",
     glowColor: "group-hover:shadow-violet-500/10",
     borderHover: "group-hover:border-violet-500/30",
   },
   {
-    icon: TrendingUp,
-    title: "SEO",
+    icon: Network,
+    title: "VPN & Networking",
     description:
-      "Search engine optimisation built in from day one. We help you rank for the right keywords and attract customers who are already looking for you.",
-    iconColor: "text-rose-400",
-    glowColor: "group-hover:shadow-rose-500/10",
-    borderHover: "group-hover:border-rose-500/30",
-  },
-  {
-    icon: Cloud,
-    title: "Cloud Migrations",
-    description:
-      "Seamless migrations to AWS, Azure, or GCP. We plan, execute, and validate your move to the cloud with minimal downtime and zero data loss.",
+      "Site-to-site VPNs, secure remote access, and network configuration for your office or team.",
     iconColor: "text-sky-400",
     glowColor: "group-hover:shadow-sky-500/10",
     borderHover: "group-hover:border-sky-500/30",
   },
   {
-    icon: GitBranch,
-    title: "CI/CD Pipelines",
+    icon: HardDrive,
+    title: "Servers & Storage",
     description:
-      "Automated build, test, and deployment pipelines that ship code faster and more reliably. Less manual work, fewer errors, faster releases.",
-    iconColor: "text-amber-400",
-    glowColor: "group-hover:shadow-amber-500/10",
-    borderHover: "group-hover:border-amber-500/30",
-  },
-  {
-    icon: Server,
-    title: "Infrastructure",
-    description:
-      "Scalable, resilient infrastructure designed for performance. From IaC with Terraform to containerised workloads, we build platforms that last.",
+      "Windows Server setup, NAS configuration, backups, and on-prem or hybrid infrastructure.",
     iconColor: "text-cyan-400",
     glowColor: "group-hover:shadow-cyan-500/10",
     borderHover: "group-hover:border-cyan-500/30",
+  },
+  {
+    icon: Mail,
+    title: "Email Setup",
+    description:
+      "Professional email on your own domain — Exchange, Microsoft 365, or Google Workspace.",
+    iconColor: "text-rose-400",
+    glowColor: "group-hover:shadow-rose-500/10",
+    borderHover: "group-hover:border-rose-500/30",
+  },
+  {
+    icon: Headphones,
+    title: "Ongoing IT Support",
+    description:
+      "Remote helpdesk and proactive monitoring so issues get fixed before they become problems.",
+    iconColor: "text-amber-400",
+    glowColor: "group-hover:shadow-amber-500/10",
+    borderHover: "group-hover:border-amber-500/30",
   },
 ];
 
@@ -74,20 +74,19 @@ export default function ServicesSection() {
           className="max-w-2xl mb-16 md:mb-20"
         >
           <p className="text-sm text-indigo-400/80 tracking-widest uppercase mb-4 font-medium">
-            What We Do
+            Services
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-5">
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-              Web, cloud, and everything
+              Everything your business
             </span>
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-rose-300">
-              in between.
+              needs to run.
             </span>
           </h2>
           <p className="text-base text-white/40 leading-relaxed max-w-lg">
-            From a bespoke website to a full cloud migration, we handle the
-            technical side of your business end to end.
+            From Microsoft 365 setup to VPNs and server management, we handle your IT so you can focus on the work that matters.
           </p>
         </motion.div>
 

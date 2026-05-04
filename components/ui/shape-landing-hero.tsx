@@ -72,9 +72,9 @@ function ElegantShape({
 }
 
 function HeroGeometric({
-  badge = "Design Collective",
-  title1 = "Elevate Your Digital Vision",
-  title2 = "Crafting Exceptional Websites",
+  badge = "IT Consulting · Uxbridge, London",
+  title1 = "IT Infrastructure,",
+  title2 = "Done Right.",
 }: {
   badge?: string;
   title1?: string;
@@ -185,8 +185,7 @@ function HeroGeometric({
             animate="visible"
           >
             <p className="text-base sm:text-lg md:text-xl text-white/40 mb-10 leading-relaxed font-light tracking-wide max-w-xl mx-auto px-4">
-              Bespoke web design and development for businesses in Uxbridge and
-              across West London. Built to perform, designed to impress.
+              Reliable IT setup and support for small businesses across Uxbridge and West London. Microsoft 365, VPNs, servers, and email — handled end to end.
             </p>
           </motion.div>
 
@@ -201,7 +200,7 @@ function HeroGeometric({
               href="/contact/"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-all duration-200"
             >
-              Start Your Project
+              Get a Free Consultation
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a

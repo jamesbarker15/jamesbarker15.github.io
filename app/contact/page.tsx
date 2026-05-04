@@ -6,13 +6,13 @@ import { Send, Phone, Mail, MapPin, CheckCircle, AlertCircle } from "lucide-reac
 import { cn } from "@/lib/utils";
 
 const services = [
-  "Web Design",
-  "Web Application",
-  "SEO",
-  "Cloud Migration",
-  "CI/CD Pipeline",
-  "Infrastructure",
-  "Other",
+  "Microsoft 365 Setup / Migration",
+  "Security & Compliance (MFA, Intune)",
+  "VPN & Networking",
+  "Server & Storage Setup",
+  "Email Setup",
+  "Ongoing IT Support / Helpdesk",
+  "General Enquiry",
 ];
 
 const contactInfo = [
@@ -98,16 +98,16 @@ export default function ContactPage() {
             </p>
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-5">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-                Let&apos;s build something
+                Let&apos;s sort out
               </span>
               <br />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 to-rose-300">
-                great together.
+                your IT.
               </span>
             </h1>
             <p className="text-base text-white/40 leading-relaxed max-w-md">
-              Tell us about your project and we&apos;ll get back to you within one
-              business day.
+              Tell us about your IT needs and we&apos;ll get back to you within one
+              business day with a free consultation offer.
             </p>
           </motion.div>
 
@@ -215,7 +215,7 @@ export default function ContactPage() {
                       onChange={handleChange}
                       required
                       rows={5}
-                      placeholder="Tell us about your project, goals, and any specific requirements..."
+                      placeholder="Tell us about your IT needs, current setup, and any specific requirements..."
                       className={cn(inputClass, "resize-none")}
                     />
                   </div>

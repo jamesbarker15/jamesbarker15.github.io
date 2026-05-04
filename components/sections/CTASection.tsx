@@ -20,17 +20,16 @@ export default function CTASection() {
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight mb-6">
             <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/70">
-              Ready to elevate
+              Ready to sort out
             </span>
             <br />
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-indigo-300 via-white/90 to-rose-300">
-              your online presence?
+              your IT?
             </span>
           </h2>
 
           <p className="text-base md:text-lg text-white/40 mb-10 leading-relaxed max-w-md mx-auto">
-            Let&apos;s build something exceptional together. Get in touch today
-            for a free, no-obligation consultation.
+            Book a free 30-minute discovery call. No hard sell — just honest advice on what your business actually needs.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -38,7 +37,7 @@ export default function CTASection() {
               href="/contact/"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-white text-black text-sm font-semibold hover:bg-white/90 transition-all duration-200"
             >
-              Start a Project
+              Book a Free Call
               <ArrowRight className="h-4 w-4" />
             </Link>
             <a

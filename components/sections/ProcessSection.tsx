@@ -1,43 +1,43 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Search, Palette, Code2, Rocket } from "lucide-react";
+import { Phone, FileText, Zap, Headphones } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const steps = [
   {
     number: "01",
-    title: "Discover",
+    title: "Free Discovery Call",
     description:
-      "We start by understanding your business, your goals, and who your customers are. No assumptions — just careful listening.",
-    icon: Search,
+      "We learn about your business, current setup, and pain points. No jargon, no commitment.",
+    icon: Phone,
     color: "text-indigo-400",
     bg: "bg-indigo-500/[0.08]",
   },
   {
     number: "02",
-    title: "Design",
+    title: "IT Audit & Proposal",
     description:
-      "We craft a design that reflects your brand and delivers a great experience across every device.",
-    icon: Palette,
+      "We document what you have, identify gaps, and send a clear proposal with fixed pricing.",
+    icon: FileText,
     color: "text-violet-400",
     bg: "bg-violet-500/[0.08]",
   },
   {
     number: "03",
-    title: "Build",
+    title: "Setup & Migration",
     description:
-      "Clean code, fast load times, and built-in SEO. We develop your site with performance and longevity in mind.",
-    icon: Code2,
+      "We handle everything: installs, configurations, migrations, and testing. Minimal disruption to your team.",
+    icon: Zap,
     color: "text-rose-400",
     bg: "bg-rose-500/[0.08]",
   },
   {
     number: "04",
-    title: "Launch",
+    title: "Ongoing Support",
     description:
-      "We handle the go-live and stick around for support. Your success after launch matters just as much to us.",
-    icon: Rocket,
+      "Remote monitoring and helpdesk cover keeps things running. One number to call when something goes wrong.",
+    icon: Headphones,
     color: "text-amber-400",
     bg: "bg-amber-500/[0.08]",
   },
@@ -66,12 +66,11 @@ export default function ProcessSection() {
               Simple process,
             </span>{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-rose-300 to-indigo-300">
-              exceptional results.
+              reliable results.
             </span>
           </h2>
           <p className="text-base text-white/40 leading-relaxed">
-            From first conversation to live website, we keep things clear,
-            collaborative, and straightforward.
+            From first call to fully configured infrastructure, we keep things clear and straightforward.
           </p>
         </motion.div>
 

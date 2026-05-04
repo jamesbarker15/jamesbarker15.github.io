@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 
 const stats = [
   {
-    value: "10+",
-    label: "Websites Launched",
+    value: "50+",
+    label: "Businesses Supported",
     description: "Across West London and beyond",
   },
   {
